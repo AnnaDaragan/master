@@ -1,5 +1,4 @@
 json
 requests
 sentry-sdk==0.14.4
-sentry_sdk
 logging
