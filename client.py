@@ -10,7 +10,7 @@ with configure_scope() as scope:
     scope.set_tag("Lab", "2")
 
 try:
-    r=requests.get("https://api.nasa.gov/planetary/apod?api_key=")
+    r=requests.get("https://127.0.0.1:5000/") #"https://api.nasa.gov/planetary/apod?api_key=")
     if r.status_code != 200:
         logging.error("Connection error")
         print("Connection error, logging")
