@@ -10,10 +10,8 @@ with configure_scope() as scope:
     scope.set_tag("Lab", "2")
 
 try:
-    r=requests.get("https://api.thecatapi.com/v1/breeds")
-    if r.status_code == 200:
-        post=r.json()
-    else:
+    r=requests.get("https://api.nasa.gov/planetary/apod?api_key=")
+    if r.status_code != 200:
         logging.error("Connection error")
         print("Connection error, logging")
 except requests.exceptions.ConnectionError as e:
