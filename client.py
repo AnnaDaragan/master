@@ -7,10 +7,10 @@ sentry_sdk.init("https://f8774516c21f40938838bfe22005ae38@o392992.ingest.sentry.
 
 with configure_scope() as scope:
     scope.set_tag("Project", "IKSiS")
-    scope.set_tag("Lab", "3")
+    scope.set_tag("Lab", "2")
 
 try:
-    r=requests.get("http://127.0.0.1:5000/CollectionApi")
+    r=requests.get("https://api.thecatapi.com/v1/breeds")
     if r.status_code == 200:
         post=r.json()
     else:
