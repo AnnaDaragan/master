@@ -1,5 +1,5 @@
 json
 requests
-tkinter
+sentry-sdk==0.14.4
 sentry_sdk
 logging
