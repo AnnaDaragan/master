@@ -15,7 +15,7 @@ try:
         post=r.json()
     else:
         logging.error("Connection error")
-        print("Connection error")
+        print("Connection error, logging")
 except requests.exceptions.ConnectionError as e:
     sentry_sdk.capture_exception(e)
     r="The destination computer rejected the connection request"
