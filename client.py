@@ -12,7 +12,7 @@ with configure_scope() as scope:
 try:
     r=requests.get("https://127.0.0.1:5000/") #"https://api.nasa.gov/planetary/apod?api_key=")
     if r.status_code != 200:
-        logging.error("Connection error")
+        logging.error("Connection error, logging")
         print("Connection error, logging")
 except requests.exceptions.ConnectionError as e:
     sentry_sdk.capture_exception(e)
